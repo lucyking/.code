@@ -1,0 +1,39 @@
+#include <stdlib.h>
+#include <stdio.h>
+int main(){
+    typedef struct a{
+        int data;
+        struct a *link;
+    }Node;
+
+    typedef struct{
+      Node *rear;
+    }CircLinkQueue;
+
+    CircLinkQueue Q;
+    
+    Node a,*b,*c;
+    b=(Node *)malloc(sizeof(Node)); Q.rear=b;
+    c=(Node *)malloc(sizeof(Node));
+    a.data=1;       a.link=b;
+    (*b).data=2;    b->link=c;
+    c->data=333;    c->link=NULL;
+    printf("this is b:\t");
+    printf("%d\n",b->data);
+    printf("this is a:\t");
+    printf("%d\n",a.data);
+
+    printf("this is [Q.rear->link->data]:\n"); 
+    printf("%d\n",(*(*Q.rear).link).data);
+
+    printf("this is Q.(*rear).link->data):\n");
+    printf("%d\n",(*Q.rear).link->data);
+
+
+    printf("this is Q.(*rear).(*link).data):\n");
+    printf("%d.",Q.rear->link->data);
+
+    return -1;
+}
+
+

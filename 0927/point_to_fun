@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int fun(int *p){
+    *p = 213;
+    }
+
+int main(){
+int a =1;
+printf("before : %d\n",a);
+fun(&a);
+printf("after : %d\n",a);
+
+return 0;
+
+}

@@ -1,0 +1,42 @@
+#define ERROR 1
+#define OVERFLOW -1
+#define LIST_INIT_SIZE 100
+#define LISTINCREMENT 10
+#include <stdlib.h>
+    
+typedef struct a{
+    int *elem;
+    int length;
+    int listsize;
+}SqList;
+
+int InitList_Sq (SqList *L){
+    (*L).elem = (int *)malloc(LIST_INIT_SIZE*sizeof(int));
+    if(!(*L).elem) exit(OVERFLOW);
+    (*L).listsize =LIST_INIT_SIZE;
+    return 0;
+}
+
+
+int ListInsert_Sq(Sqlist *L,int i,int e){
+    if(i<1 || i>(*L).length+1) return ERROR;
+    if((*L).length >=(*L).listsize){
+        newbase = (int *)realloc((*L).elem,((*L).listsize+LISTINCREMENT)*sizeof(int));
+        if(!newbase)    exit(OVERFLOW);
+        (*L).elem =newbase;
+        (*L).listsize +=LISTINCREMENT;
+}
+
+int *q;
+int i;
+q = &((*L).elem[i-1]);
+for(i=)
+
+
+    
+int main(){
+   SqList L; 
+   InitList_Sq(&L);
+    return 0;
+    }
+

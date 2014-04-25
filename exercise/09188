@@ -1,0 +1,17 @@
+
+#include <stdio.h>
+int main(){
+    int x = 91 ;
+    int y = 100;
+    int i = 0;
+    while(y>0){
+        i++;
+        printf("%d\n",i);
+        if(x>100){x-=10;y--;}
+       // i++;
+       //  printf("%d\n",i);
+        else x++;
+        
+    }
+return 0;
+}
